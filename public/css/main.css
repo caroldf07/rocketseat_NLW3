@@ -10,11 +10,12 @@ body{
 }
 
 :root{
-    font-size: 100%;
+    font-size: 62.5%;
 }
 
 body,input,button,textarea{
-    font-family: 400 1.8rem/1 'Nunito', sans-serif;
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+    
 }
 
 

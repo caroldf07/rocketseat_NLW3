@@ -35,3 +35,17 @@ main h1{
 .visit a{
     animation-delay: 250ms;
 }
+
+@keyframes right{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.animate-right{
+    animation: right;
+    animation-duration: 800ms;
+}

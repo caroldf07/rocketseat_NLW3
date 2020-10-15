@@ -1,13 +1,23 @@
 #page-landing{
-    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    background: linear-gradient(329.54deg,#FD9E9C 0%, #930102  100%);
     text-align: center;
     min-height: 100vh;
     display: flex;
+    
 }
 
 #container{
     margin: auto;
-    width: 90%;
+    width: min(90%,112rem);
+}
+
+header img{
+    width: 17rem;
+}
+
+main h1{
+    font-weight: bold;
+    font-size: clamp(4rem, 6.5vw, 8.4rem);
 }
 
 .location, h1, .visit p{
@@ -17,7 +27,7 @@
 .visit a{
     width: 8rem;
     height: 8rem;
-    background: #ffd666;
+    background: gold;
     border: none;
     border-radius: 3rem;
     display: flex;
@@ -28,5 +38,62 @@
 }
 
 .visit a:hover{
-    background-color: #96feff;
+    background-color: black;
+    transition: background-color 200ms;
+}
+
+/* Desktop*/
+
+@media (min-width:760px){
+    #container{
+        background: url("../images/bg_arco_flecha-min.png") no-repeat 100% / 80%;
+        padding: 5rem 2rem;
+        width: 100vw;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .location, h1, .visit p{
+        height: initial;
+        text-align: initial;
+    }
+
+    .location{
+        text-align: right;
+        line-height: 1.5;
+        font-size: 1.5rem;
+        top: 2rem;
+        position: absolute;
+        right: 2rem;
+    }
+
+    main h1{
+        font-weight: bold;
+        font-size: clamp(4rem, 8vw, 8rem);
+        margin: clamp(10%,9vh,12%) 0 4rem;
+        line-height: .88;
+        width: min(300px,80%);
+    }
+
+    .visit{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .visit p{
+        font-size: 2.4rem;
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+        color: black;
+    }
+
+    .visit a {
+        position: absolute;
+        right: 4rem;
+        bottom: 0rem;
+    }
+
 }
