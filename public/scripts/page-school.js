@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 //create icon
 const icon = L.icon({
-    iconUrl: "./public/images/pakua-padrao1.png",
+    iconUrl: "/images/pakua-padrao1.png",
     iconSize: [58,58],
     iconAnchor: [29,68],
     popupAnchor: [170,2]

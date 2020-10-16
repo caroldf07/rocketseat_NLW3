@@ -6,7 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 //create icon
 const icon = L.icon({
-    iconUrl: "./public/images/pakua-padrao1.png",
+    iconUrl: "/images/pakua-padrao1.png",
     iconSize: [58,58],
     iconAnchor: [29,68],
     popupAnchor: [170,2]
@@ -18,7 +18,7 @@ const popup = L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Pakua Central <a href="schools.html?id=1" class ="choose-school"> <img src="./public/images/arrow-white.svg"></a>')
+}).setContent('Pakua Central <a href="school?id=1" class ="choose-school"> <img src="/images/arrow-white.svg"></a>')
 
 //create and add marker
 L.marker([-25.4906671,-50.6550479],{ icon })

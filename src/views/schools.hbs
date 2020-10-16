@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Localize uma escola | Pakua</title>
+  <link rel="icon" href="/images/pakua-padrao1.png" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/page-landing.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
+  <link rel="stylesheet" href="/css/page-schools.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+</head>
+
+<body>
+  <div id="page-schools">
+    <aside class="animate-right">
+      <header>
+        <a href="/">
+          <img src="/images/logo.png" alt="Pakua" />
+
+        </a>
+        <h2>Escolha uma escola no mapa</h2>
+        <p>Estamos ansiosos para treinar contigo!</p>
+      </header>
+
+      <footer>
+        <strong> Florianópolis </strong>
+
+        <span>Santa Catarina</span>
+      </footer>
+    </aside>
+
+    <a href="/create-school" class="create-school" title="Cadastre uma Escola de Pakua">
+      <img src="/images/plus.svg" alt="Adicionar Escola" />
+    </a>
+
+    <div id="mapid"></div>
+  </div>
+  <script src="/scripts/page-schools.js"></script>
+</body>
+
+</html>
