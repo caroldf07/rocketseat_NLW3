@@ -27,3 +27,15 @@ L.marker([lat,lng],{ icon })
     .bindPopup(popup)
     .openPopup();
 }
+
+const schoolsSpan = document.querySelectorAll('.schools span')
+schoolsSpan.forEach(span => {
+    const school = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+    }
+
+    addMarker(school)
+})

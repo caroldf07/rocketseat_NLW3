@@ -19,8 +19,8 @@ module.exports = [
     },
     {
         id: 2,
-        lat:"-25.4906671",
-        lng: "-50.6550479",
+        lat:"-23.5998489",
+        lng: "-46.6364337",
         name: "Pakua Santa Cruz",
         description: "Há mais de 10 anos em São Paulo, na capital, o Pa-Kua está presente no bairro da Vila Mariana com a escola Santa Cruz, localizada a uma quadra da estação Santa Cruz do metrô (linha azul), quase em frente ao shopping. Tem fácil acesso também de ônibus e carro pela Av. Domingos de Moraes e conta com espaço interno para deixar bicicleta. Ambiente acolhedor, com tatame amplo, ar condicionado e banheiro com chuveiro, possuímos uma grade de horários diversificada para atender todos os tipos de público.",
         images:[
