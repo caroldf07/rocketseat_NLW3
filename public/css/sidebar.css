@@ -1,0 +1,40 @@
+
+aside.sidebar{
+    position: fixed;
+    height: 100%;
+    padding: 32px 0px;
+    background:url("../images/free_class_bg-min.jpg") #930102;
+    background-size: cover;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+.with-sidebar{
+    padding-left: 110px;
+}
+
+aside.sidebar footer button{
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: black;
+    border-radius: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+aside.sidebar footer button:hover{
+    background-color: gold;
+}
+
+aside.sidebar footer button img{
+    width: initial;
+}

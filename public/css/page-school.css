@@ -3,46 +3,6 @@
     min-height:100vh;
 }
 
-aside.sidebar{
-    position: fixed;
-    height: 100%;
-    padding: 32px 0px;
-    background:url("../images/free_class_bg-min.jpg") #930102;
-    background-size: cover;
-
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 15%;
-}
-
-.with-sidebar{
-    padding-left: 110px;
-}
-
-aside.sidebar footer button{
-    width: 48px;
-    height: 48px;
-    border: none;
-    background: black;
-    border-radius: 1.6rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s;
-}
-
-aside.sidebar footer button:hover{
-    background-color: gold;
-}
-
-aside.sidebar footer button img{
-    width: initial;
-}
-
 main{
     flex: 1;
 }
@@ -98,7 +58,7 @@ main{
 }
 
 .school-details-content{
-    padding: 8rem;
+    padding: 0rem 8rem;
     color: black;
 }
 
@@ -123,40 +83,6 @@ main{
 .school-details-content p{
     line-height: 1.5;
     margin-top: 2.4rem;
-}
-
-/* map*/
-
-.map-container{
-    margin-top: 6.4rem;
-    background: #fff9b9;
-    border: 1px solid rgb(233, 232, 232);
-    border-radius: 2rem;
-}
-
-#mapid{
-    width: 100%;
-    height: 28rem;
-    z-index: 10;
-}
-
-.map-container footer{
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.map-container footer a{
-    color: black;
-    text-decoration: none;
-}
-
-.map-container footer a:hover{
-    color: #930102;
-}
-
-.map-container .leaflet-container{
-    border-bottom: 1px solid white;
-    border-radius: 2rem;
 }
 
 #school-details hr{
@@ -211,24 +137,3 @@ main{
     border-radius: 20px;
 }
 
-.primary-button{
-    margin-top: 6.4rem;
-    width: 100%;
-    height: 6.4rem;
-    border: none;
-    cursor: pointer;
-    background: #930102;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color .2s;
-}
-
-.primary-button:hover{
-    background: gold;
-}
-
-.primary-button img{
-    margin: 1.6rem;
-}
