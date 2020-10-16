@@ -18,5 +18,11 @@ body,input,button,textarea{
     
 }
 
+.dark-mode {
+    background-color: black;
+    color: white;
+    transition: background-color .5s;
+  }
+
 
 

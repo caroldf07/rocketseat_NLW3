@@ -7,6 +7,10 @@
     border-radius: 2rem;
 }
 
+.dark-mode .map-container{
+    background: white;
+}
+
 #mapid{
     width: 100%;
     height: 28rem;
@@ -21,6 +25,10 @@
 .map-container footer a{
     color: white;
     text-decoration: none;
+}
+
+.dark-mode .map-container footer a{
+    color: black;
 }
 
 .map-container footer a:hover{

@@ -49,3 +49,8 @@ function selectImage(event){
     //add class active
     button.classList.add('active')
 }
+
+function darkMode(){
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }

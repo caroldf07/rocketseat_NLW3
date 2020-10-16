@@ -1,139 +1,196 @@
-#page-school{
-    display: flex;
-    min-height:100vh;
+#page-school {
+  display: flex;
+  min-height: 100vh;
 }
 
-main{
-    flex: 1;
+main {
+  flex: 1;
 }
+
+input[type="checkbox"] {
+  z-index: 3;
+  width: 5vw;
+  height: 2vw;
+  -webkit-appearance: none;
+  position: absolute;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  left: 85vw;
+  top: 10vh;
+  border-radius: 2.5vw;
+  background: #000;
+}
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 5vw;
+  background: #fff;
+  left: 0.5vw;
+  top: 0.3vw;
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked {
+  background: #fff;
+}
+input:checked[type="checkbox"]:before {
+  left: 3.2vw;
+  background: #000;
+}
+
 
 /*details*/
 
-#school-details{
-    width: 70rem;
-    margin: 6.4rem auto;
-    background: white;
-    border: 1px solid #D3E2E5;
-    border-radius: 2rem;
-    overflow: hidden;
+#school-details {
+  width: 70rem;
+  margin: 6.4rem auto;
+  background: white;
+  border: 1px solid #d3e2e5;
+  border-radius: 2rem;
+  overflow: hidden;
 }
+
+.dark-mode #school-details {
+    background: black;
+  }
 
 /* Change the CSS of the first image*/
-#school-details > img{
-    width: 100%;
-    height: 50rem;
-    object-fit: cover;
+#school-details > img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
 }
 
-.images{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 1.6rem;
-    margin: 16px 40px 0px;
-
+.images {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.6rem;
+  margin: 16px 40px 0px;
 }
 
 /*adjust of image inside of button*/
-.images button{
-    border: 0;
-    background: none;
-    height: 8.8rem;
-    cursor: pointer;
-    border-radius: 2rem;
+.images button {
+  border: 0;
+  background: none;
+  height: 8.8rem;
+  cursor: pointer;
+  border-radius: 2rem;
 
-    /*images' box transpass the button, so with this property we limited the image*/
-    overflow: hidden;
-    opacity: .8;
-    transition: opacity .25s;
+  /*images' box transpass the button, so with this property we limited the image*/
+  overflow: hidden;
+  opacity: 0.8;
+  transition: opacity 0.25s;
 }
 
-.images button:hover, .images button.active{
-    opacity: 1;
+.images button:hover,
+.images button.active {
+  opacity: 1;
 }
 
-.images button img{
-    width: 100%;
-    height: 8.8rem;
-    object-fit: cover;
+.images button img {
+  width: 100%;
+  height: 8.8rem;
+  object-fit: cover;
 }
 
-.school-details-content{
-    padding: 0rem 8rem;
+.school-details-content {
+  padding: 0rem 8rem;
+  color: black;
+}
+
+.dark-mode .school-details-content{
+    color: white;
+}
+
+.school-details-content .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-details-content .title img {
+  height: 10rem;
+}
+
+.school-details-content h1 {
+  color: gold;
+  font-size: 5.4rem;
+  line-height: 1.5;
+  width: initial;
+}
+
+.school-details-content p {
+  line-height: 1.5;
+  margin-top: 2.4rem;
+}
+
+#school-details hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #930102;
+  margin: 6.4rem 0;
+}
+
+#school-details h2 {
+  font-size: 3.6rem;
+  color: black;
+  text-align: center;
+}
+
+.dark-mode #school-details h2{
+    color: white;
+}
+
+#school-details p {
+  line-height: 1.5;
+  margin-top: 2.4rem;
+  color: black;
+  padding: 1rem;
+}
+
+.dark-mode #school-details p{
+    color: white;
+}
+
+.open-detail {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+.open-detail img {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.open-detail div {
+  padding: 3.2rem 2.4rem;
+}
+
+.open-detail .hour {
+  background: black;
+  border: 1px solid #e2dfb3;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.dark-mode .open-detail .hour{
+    background: white;
     color: black;
 }
 
-.school-details-content .title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.open-detail .open-weekends {
+  background: black;
+  border: 1px solid #e2dfb3;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-.school-details-content .title img{
-    height: 10rem;
-}
-
-.school-details-content h1{
-    color: gold;
-    font-size: 5.4rem;
-    line-height: 1.5;
-    width: initial;
-}
-
-.school-details-content p{
-    line-height: 1.5;
-    margin-top: 2.4rem;
-}
-
-#school-details hr{
-    width: 100%;
-    height: 1px;
-    border: none;
-    background: #930102;
-    margin: 6.4rem 0;
-}
-
-#school-details h2{
-    font-size: 3.6rem;
+.dark-mode .open-detail .open-weekends{
+    background: white;
     color: black;
-    text-align: center;
 }
-
-#school-details p{
-    line-height: 1.5;
-    margin-top: 2.4rem;
-    color: black;
-    padding: 1rem;
-}
-
-.open-detail{
-    margin-top: 2.4rem ;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-}
-
-.open-detail img{
-    display: block;
-    margin-bottom: 2rem;
-}
-
-.open-detail div{
-    padding: 3.2rem 2.4rem;
-
-}
-
-.open-detail .hour{
-    background: black;
-    border: 1px solid #e2dfb3;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
-
-.open-detail .open-weekends{
-    background: black;
-    border: 1px solid #e2dfb3;
-    box-sizing: border-box;
-    border-radius: 20px;
-}
-

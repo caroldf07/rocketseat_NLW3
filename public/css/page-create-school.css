@@ -7,6 +7,66 @@ main{
     flex: 1;
 }
 
+.dark-mode form{
+    background: black;
+    border: 1px solid #e3e5d3;
+    color: white;
+    transition: background-color .5s;
+
+}
+
+.dark-mode form footer{
+    background: white;
+}
+
+.dark-mode form footer a{
+    color: black;
+}
+
+.dark-mode form input,
+.dark-mode form textarea{
+    background: #1D1E22;
+    color: white;
+}
+
+.dark-mode .button-select button{
+    background: white;
+    color: black;
+}
+
+  input[type="checkbox"] {
+    z-index: 3;
+    width: 5vw;
+    height: 2vw;
+    -webkit-appearance: none;
+    position: absolute;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    left: 85vw;
+    top: 10vh;
+    border-radius: 2.5vw;
+    background: #000;
+}
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 5vw;
+    background: #fff;
+    left: .5vw;
+    top: .3vw;
+    transition: .5s;
+}
+  input[type="checkbox"]:checked {
+    background: #fff;
+  }
+  input:checked[type="checkbox"]:before {
+    left: 3.2vw;
+    background: #000;
+  }
+
 .map-container{
     margin: 0 0 4rem;
 }

@@ -12,16 +12,18 @@ const icon = L.icon({
     popupAnchor: [170,2]
 })
 
-//create popup
+function addMarker({id,name,lat,lng}){
+    //create popup
 const popup = L.popup({
     closeButton: false,
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Pakua Central <a href="school?id=1" class ="choose-school"> <img src="/images/arrow-white.svg"></a>')
+}).setContent(`${name} <a href=school?id=${id}" class ="choose-school"> <img src="/images/arrow-white.svg"></a>`)
 
 //create and add marker
-L.marker([-25.4906671,-50.6550479],{ icon })
+L.marker([lat,lng],{ icon })
     .addTo(map)
     .bindPopup(popup)
     .openPopup();
+}
