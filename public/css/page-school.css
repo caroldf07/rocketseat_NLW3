@@ -106,7 +106,7 @@ input:checked[type="checkbox"]:before {
 
 .school-details-content .title {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 

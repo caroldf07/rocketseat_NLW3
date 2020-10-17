@@ -22,7 +22,10 @@ const icon = L.icon({
 
 
 //create and add marker
-L.marker([-25.4906671,-50.6550479],{ icon })
+const spanLat = document.querySelector('span[data-lat]').dataset.lat
+const spanLng = document.querySelector('span[data-lng]').dataset.lng
+
+L.marker([spanLat,spanLng],{ icon })
     .addTo(map)
     .openPopup();
 

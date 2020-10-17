@@ -1,149 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Informações sobre a escola | Pakua</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
-    <link rel="icon" href="/images/pakua-padrao1.png" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/page-landing.css" />
-    <link rel="stylesheet" href="/css/animation.css" />
-    <link rel="stylesheet" href="/css/sidebar.css" />
-    <link rel="stylesheet" href="/css/map.css" />
-    <link rel="stylesheet" href="/css/page-school.css" />
-    <link rel="stylesheet" href="/css/primary-button.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div id="page-school">
-      <aside class="animate-right sidebar">
-        <footer>
-          <button onclick="history.back()">
-            <img src="/images/arrow-back.svg" alt="Voltar" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{school.name}} | Pakua</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <link rel="icon" href="/images/pakua-padrao1.png" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/page-landing.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/map.css" />
+  <link rel="stylesheet" href="/css/page-school.css" />
+  <link rel="stylesheet" href="/css/primary-button.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div id="page-school">
+    <aside class="animate-right sidebar">
+      <footer>
+        <button onclick="history.back()">
+          <img src="/images/arrow-back.svg" alt="Voltar" />
+        </button>
+      </footer>
+    </aside>
+
+    <main class="animate-appear with-sidebar">
+      <input onclick="darkMode()" type="checkbox" id="btn">
+      <div id="school-details">
+        <img src="{{school.firsImage}}" alt="{{school.name}}" />
+
+        <div class="images">
+          {{#each school.images}}
+          <button onclick="selectImage(event)" class="active" type="button">
+            <img src="{{this}}" alt="{{school.name}}" />
           </button>
-        </footer>
-      </aside>
-
-      <main class="animate-appear with-sidebar">
-        <input onclick="darkMode()" type="checkbox" id="btn">
-        <div id="school-details">
-          <img
-            src="/images/IMG_20190502_174017756_BURST005 (1).jpg"
-            alt="Pakua Central"
-          />
-
-          <div class="images">
-            <button onclick="selectImage(event)" class="active" type="button">
-              <img
-                src="/images/escola-1/IMG_2672.JPG?id=1"
-                alt="Pakua Central"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="/images/escola-1/IMG_6231 (1).JPG?id=2"
-                alt="Pakua Central"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="/images/escola-1/IMG_9724 (1).JPG?id=3"
-                alt="Pakua Central"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="/images/escola-1/unnamed (2).jpg?id=4"
-                alt="Pakua Central"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="/images/escola-1/IMG_9730 (1).JPG?id=5"
-                alt="Pakua Central"
-              />
-            </button>
-
-            <button onclick="selectImage(event)" type="button">
-              <img
-                src="/images/escola-1/unnamed (1).jpg?id=6"
-                alt="Pakua Central"
-              />
-            </button>
-          </div>
-
-          <div class="school-details-content">
-            <div class="title">
-              <img src="/images/pakua-padrao1.png" alt="Pakua" />
-              <h1>Pakua Central</h1>
-            </div>
-
-            <p>
-              Inaugurada em 2015 a Escola é a mais nova sede da Associação
-              Brasileira de Pa-Kua. Localizada em frente ao Armazém Vieira,
-              renomado estabelecimento de Florianópolis, a escola possui
-              infraestrutura completa, com equipamentos para as práticas, tatame
-              de 96m², ambiente climatizado, vestiários, chuveiros e armários.
-              Toda a Estrutura foi um trabalho de restauração de uma das
-              construções tombadas como patrimônio Histórico e Cultural da
-              cidade.
-            </p>
-          </div>
-
-          <div class="map-container">
-            <div id="mapid"></div>
-
-            <footer>
-              <a href="">Ver rotas no Google Maps</a>
-            </footer>
-          </div>
-
-          <hr />
-
-          <h2>Instruções para agendamento de aula experimental</h2>
-
-          <p>
-            Venha como se sentir a vontade, traga outra muda de roupa específica
-            para a aula e uma máscara extra
-          </p>
-
-          <div class="open-detail">
-            <div class="hour">
-              <img src="/images/clock.svg" alt="Horários" />
-              Aulas das 08:00 as 21:00
-            </div>
-            <div class="open-weekends">
-              <img src="/images/info.svg" alt="Informações" />
-              Não abrimos aos domingos
-            </div>
-          </div>
-
-          <button class="primary-button" type="button">
-            <img src="/images/whatsapp.svg" alt="Whatsapp" />
-            Entre em contato!
-          </button>
+          {{/each}}
         </div>
-      </main>
-    </div>
-    <script src="/scripts/page-school.js"></script>
-  </body>
+
+        <div class="school-details-content">
+          <div class="title">
+            <img src="/images/pakua-padrao1.png" alt="Pakua" />
+            <h1>{{school.name}}</h1>
+          </div>
+
+          <p>{{school.about}}</p>
+        </div>
+
+        <div class="map-container">
+          <div id="mapid"></div>
+          <span data-lat="{{school.lat}}" data-lng="{{school.lng}}">
+          </span>
+
+          <footer>
+            <a target="_blank" href="https://maps.google.com/mobile?q={{school.lat}},{{school.lng}}&zoom=15">Ver rotas
+              no Google Maps</a>
+          </footer>
+        </div>
+
+        <hr />
+
+        <h2>Instruções para agendamento de aula experimental</h2>
+
+        <p>
+          {{school.instructions}}
+        </p>
+
+        <div class="open-detail">
+          <div class="hour">
+            <img src="/images/clock.svg" alt="Horários" />
+            {{school.open_hour}}
+          </div>
+
+          {{#if school.open_weekends}}
+          <div class="open-weekends open">
+            <img src="/images/info.svg" alt="Informações" />
+            Abrimos aos sábados
+          </div>
+          {{else}}
+          <div class="open-weekends open">
+            <img src="/images/info-red.svg" alt="Informações" />
+            Não abrimo aos finais de semana
+          </div>
+          {{/if}}
+
+        </div>
+
+        <a target="_blank" ref="https://api.whatsapp.com/send?l=pt_BR&phone={{school.whatsapp}}" class="primary-button" type="button">
+          <img src="/images/whatsapp.svg" alt="Whatsapp" />
+          Entre em contato!
+        </a>
+      </div>
+    </main>
+  </div>
+  <script src="/scripts/page-school.js"></script>
+</body>
+
 </html>
