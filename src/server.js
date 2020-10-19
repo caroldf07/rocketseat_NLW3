@@ -14,5 +14,7 @@ server
 .get('/schools',pages.schools)
 .get('/school',pages.school)
 .get('/create-school',pages.createSchool)
+.post('/save-school',pages.saveSchool)
+
 
 server.listen(8080)

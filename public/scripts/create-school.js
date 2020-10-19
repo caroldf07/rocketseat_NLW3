@@ -85,3 +85,8 @@ function darkMode(){
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+
+function validate(event){
+  event.preventDefault()
+  alert("Preencha todos os campos, inclusive selecione um local no mapa")
+}

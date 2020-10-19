@@ -40,4 +40,36 @@ module.exports = {
   createSchool(req, res) {
     return res.render("create-school");
   },
+
+  async saveSchool(req,res){
+    const fields = req.body
+
+    //check if is all filled
+
+    // if(Object.values(fields).includes('')){
+    //   return res.send("Todos os campos devem ser preenchidos")
+    // }
+
+    //save school
+    try {
+      const db = await dataBase
+      await saveSchool(db,{
+        lat:fields.lat,
+        lng:fields.lng,
+        name:fields.name,
+        about:fields.about,
+        whatsapp:fields.whatsapp,
+        images:fields.images.toString(),
+        instructions:fields.instructions,
+        open_hour: fields.open_hour,
+        open_weekends: fields.open_weekends
+
+      })
+          //redirect
+          return res.redirect('/schools')
+    } catch (error) {
+      console.log(error)
+      return res.send("Erro no banco de dados!")
+    }
+  }
 };
