@@ -16,7 +16,7 @@ A aplicação original do evento era o Happy, uma aplicação para localização
 Para rodar a aplicação, basta dar um git clone na URL: [https://github.com/caroldf07/rocketseat_NLW3.git](https://github.com/caroldf07/rocketseat_NLW3.git), após o dowload, rode o comando NPM START e, por fim, acesse a URL: [http://localhost:8080/](http://localhost:8080/)
 
 ## Imagens da aplicação
-![](http://imgur.com/nXnMYMX.gif)
+![](https://imgur.com/nXnMYMX.gif)
 
 ## Funcionalidades
 - Cadastro de novas escolas
